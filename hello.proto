@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package hello;
+
+service HelloService {
+    rpc Hello(HelloRequest) returns (HelloResponse) {}
+}
+
+service UnknownService {
+    rpc Hello(HelloRequest) returns (HelloResponse) {}
+}
+
+message HelloRequest {
+    int32 token = 1;
+}
+
+message HelloResponse {
+    int32 token = 1;
+}
